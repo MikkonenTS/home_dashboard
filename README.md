@@ -1,4 +1,4 @@
-Dashboard for home use
+# Dashboard for home use
 
 TODO:
 - Uni restaurant menus
