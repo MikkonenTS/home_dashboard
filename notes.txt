@@ -1,0 +1,4 @@
+Activating the virtualenv myvenv
+
+source myvenv/bin/activate
+0.0.0.0:8000
