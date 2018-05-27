@@ -4,5 +4,12 @@
 {% block title %}Home{% endblock %}
 
 {%block content%}
+{% if user.is_authenticated %}
 <h1>Dashboard</h1>
+{%else%}
+
+<a class="btn btn-primary" href="{% url 'signup' %}">Rekisteröidy</a>
+<a class="btn btn-primary" href="{% url 'login' %}">Kirjaudu</a>
+
+{% endif %}
 {%endblock%}
