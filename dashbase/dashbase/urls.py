@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import url
+from django.contrib.auth import views as auth_views
+from dash import views
 
 urlpatterns = [
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('dash/', include('dash.urls')),
-    path('login/', include('django.contrib.auth.urls')),
+    path('login/', auth_views.login, name='login'),
+    path('logput/', auth_views.logout, name='logout'),
 ]
